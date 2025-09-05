@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0-windows10.0.22621</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <EnableWindowsTargeting>true</EnableWindowsTargeting>
+
+        <PackageId>WindowSill.DevToys</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>Etienne Baudoux</Authors>
+        <Title>DevToys</Title>
+        <Description>Tons of tiny tools for developers!</Description>
+        <PackageIcon>Assets/devtoys.png</PackageIcon>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageProjectUrl>https://getwindowsill.app</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/WindowSill-app/WindowSill.DevToys</RepositoryUrl>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Include="Assets/devtoys.png" Pack="true" PackagePath="\Assets\" />
+        <None Include="LICENSE.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.183">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="WindowSill.API" Version="0.0.3.1" />
+    </ItemGroup>
+</Project>

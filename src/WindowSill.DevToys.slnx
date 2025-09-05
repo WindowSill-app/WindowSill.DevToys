@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="WindowSill.DevToys.Tests/WindowSill.DevToys.Tests.csproj" Id="76cbe43e-4e41-4e06-b5b7-4740e82d57dc" />
+  <Project Path="WindowSill.DevToys/WindowSill.DevToys.csproj" />
+</Solution>
