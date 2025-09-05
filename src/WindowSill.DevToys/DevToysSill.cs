@@ -3,7 +3,7 @@ using System.ComponentModel.Composition;
 using Microsoft.UI.Xaml.Media.Imaging;
 using WindowSill.API;
 using WindowSill.DevToys.Activators;
-using WindowSill.DevToys.Core;
+using WindowSill.DevToys.ViewModels;
 using Path = System.IO.Path;
 
 namespace WindowSill.DevToys;
@@ -12,7 +12,12 @@ namespace WindowSill.DevToys;
 [Name("DevToys")]
 internal sealed class DevToysSill : ISillActivatedByTextSelection, ISillListView
 {
-    private readonly DevToysSillViewModel _viewModel = new();
+    private readonly JsonFormatterViewModel _jsonFormatterViewModel = new();
+    private readonly JsonSortViewModel _jsonSortViewModel = new();
+    private readonly JsonConvertViewModel _jsonConvertViewModel = new();
+    private readonly UnescapeViewModel _unescapeViewModel = new();
+    private readonly Base64DecodeViewModel _base64DecodeViewModel = new();
+    private readonly XmlFormatterViewModel _xmlFormatterViewModel = new();
 
     [Import]
     private IPluginInfo _pluginInfo = null!;
@@ -26,7 +31,7 @@ internal sealed class DevToysSill : ISillActivatedByTextSelection, ISillListView
             JsonArraySelection.ActivationTypeName,
             XmlSelection.ActivationTypeName,
             XsdSelection.ActivationTypeName
-            ];
+        ];
 
     public string DisplayName => "/WindowSill.DevToys/Misc/DisplayName".GetLocalizedString();
 
@@ -54,40 +59,30 @@ internal sealed class DevToysSill : ISillActivatedByTextSelection, ISillListView
                 case JsonArraySelection.ActivationTypeName:
                     if (!currentSelection.IsReadOnly)
                     {
-                        ViewList.Add(
-                            new SillListViewMenuFlyoutItem(
-                                "/WindowSill.DevToys/Misc/Format".GetLocalizedString(),
-                                null,
-                                new MenuFlyout
-                                {
-                                    Items =
-                                    {
-                                    new MenuFlyoutItem
-                                    {
-                                        Text = "/WindowSill.DevToys/Misc/Minified".GetLocalizedString(),
-                                        Command = _viewModel.FormatJsonCommand,
-                                        CommandParameter = (currentSelection, Indentation.Minified)
-                                    },
-                                    new MenuFlyoutItem
-                                    {
-                                        Text = "/WindowSill.DevToys/Misc/TwoSpaces".GetLocalizedString(),
-                                        Command = _viewModel.FormatJsonCommand,
-                                        CommandParameter = (currentSelection, Indentation.TwoSpaces)
-                                    },
-                                    new MenuFlyoutItem
-                                    {
-                                        Text = "/WindowSill.DevToys/Misc/FourSpaces".GetLocalizedString(),
-                                        Command = _viewModel.FormatJsonCommand,
-                                        CommandParameter = (currentSelection, Indentation.FourSpaces)
-                                    },
-                                    new MenuFlyoutItem
-                                    {
-                                        Text = "/WindowSill.DevToys/Misc/OneTab".GetLocalizedString(),
-                                        Command = _viewModel.FormatJsonCommand,
-                                        CommandParameter = (currentSelection, Indentation.OneTab)
-                                    }
-                                    }
-                                }));
+                        ViewList.Add(_jsonFormatterViewModel.GetView(currentSelection));
+                        ViewList.Add(_jsonSortViewModel.GetView(currentSelection));
+                        ViewList.Add(_jsonConvertViewModel.GetView(currentSelection));
+                    }
+                    break;
+
+                case EscapedCharactersSelection.ActivationTypeName:
+                    if (!currentSelection.IsReadOnly)
+                    {
+                        ViewList.Add(_unescapeViewModel.GetView(currentSelection));
+                    }
+                    break;
+
+                case Base64TextSelection.ActivationTypeName:
+                    if (!currentSelection.IsReadOnly)
+                    {
+                        ViewList.Add(_base64DecodeViewModel.GetView(currentSelection));
+                    }
+                    break;
+
+                case XmlSelection.ActivationTypeName:
+                    if (!currentSelection.IsReadOnly)
+                    {
+                        ViewList.Add(_xmlFormatterViewModel.GetView(currentSelection));
                     }
                     break;
             }
@@ -96,9 +91,6 @@ internal sealed class DevToysSill : ISillActivatedByTextSelection, ISillListView
 
     public async ValueTask OnDeactivatedAsync()
     {
-        await ThreadHelper.RunOnUIThreadAsync(() =>
-        {
-            ViewList.Clear();
-        });
+        await ThreadHelper.RunOnUIThreadAsync(ViewList.Clear);
     }
 }

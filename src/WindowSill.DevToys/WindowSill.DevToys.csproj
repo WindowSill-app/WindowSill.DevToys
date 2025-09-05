@@ -6,17 +6,17 @@
         <EnableWindowsTargeting>true</EnableWindowsTargeting>
 
         <PackageId>WindowSill.DevToys</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.3</Version>
         <Authors>Etienne Baudoux</Authors>
         <Title>DevToys</Title>
-        <Description>Tons of tiny tools for developers!</Description>
+        <Description>Format, sort and convert JSON, format XML, decode Base64 and unescape text just by selecting it in any app! This extension was made in the same spirit than DevToys https://devtoys.app</Description>
         <PackageIcon>Assets/devtoys.png</PackageIcon>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <PackageProjectUrl>https://getwindowsill.app</PackageProjectUrl>
         <RepositoryUrl>https://github.com/WindowSill-app/WindowSill.DevToys</RepositoryUrl>
     </PropertyGroup>
     <ItemGroup>
-      <None Include="Assets/devtoys.png" Pack="true" PackagePath="\Assets\" />
+        <None Include="Assets/devtoys.png" Pack="true" PackagePath="\Assets\" />
         <None Include="LICENSE.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
@@ -25,5 +25,6 @@
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="WindowSill.API" Version="0.0.3.1" />
+        <PackageReference Include="YamlDotNet" Version="16.3.0" />
     </ItemGroup>
 </Project>
