@@ -118,34 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Convert" xml:space="preserve">
-    <value>Convert To</value>
+    <value>转换为</value>
   </data>
   <data name="Decode" xml:space="preserve">
-    <value>Decode</value>
+    <value>解码</value>
   </data>
   <data name="DisplayName" xml:space="preserve">
     <value>DevToys</value>
   </data>
   <data name="Format" xml:space="preserve">
-    <value>Format</value>
+    <value>格式化</value>
   </data>
   <data name="FourSpaces" xml:space="preserve">
-    <value>4 spaces</value>
+    <value>4 个空格</value>
   </data>
   <data name="Minified" xml:space="preserve">
-    <value>Minified</value>
+    <value>已压缩</value>
   </data>
   <data name="OneTab" xml:space="preserve">
-    <value>1 tab</value>
+    <value>1 个制表符</value>
   </data>
   <data name="Sort" xml:space="preserve">
-    <value>Sort</value>
+    <value>排序</value>
   </data>
   <data name="TwoSpaces" xml:space="preserve">
-    <value>2 spaces</value>
+    <value>2 个空格</value>
   </data>
   <data name="Unescape" xml:space="preserve">
-    <value>Unescape</value>
+    <value>反转义</value>
   </data>
   <data name="Yaml" xml:space="preserve">
     <value>Yaml</value>
