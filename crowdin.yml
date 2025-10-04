@@ -1,5 +1,5 @@
 files:
-  - source: /src/**/*.resx
+  - source: /src/**/*.resw
     ignore:
       - /**/*.%locale%.%file_extension%
       - /**/*.%two_letters_code%.%file_extension%
