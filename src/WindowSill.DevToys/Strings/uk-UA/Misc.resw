@@ -118,34 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Convert" xml:space="preserve">
-    <value>Convertir en</value>
+    <value>Перетворити на</value>
   </data>
   <data name="Decode" xml:space="preserve">
-    <value>Décoder</value>
+    <value>Декодувати</value>
   </data>
   <data name="DisplayName" xml:space="preserve">
     <value>DevToys</value>
   </data>
   <data name="Format" xml:space="preserve">
-    <value>Format</value>
+    <value>Формат</value>
   </data>
   <data name="FourSpaces" xml:space="preserve">
-    <value>4 espaces</value>
+    <value>4 пропуски</value>
   </data>
   <data name="Minified" xml:space="preserve">
-    <value>Minifié</value>
+    <value>Мінімізовано</value>
   </data>
   <data name="OneTab" xml:space="preserve">
-    <value>1 tabulation</value>
+    <value>1 табуляція</value>
   </data>
   <data name="Sort" xml:space="preserve">
-    <value>Trier</value>
+    <value>Сортувати</value>
   </data>
   <data name="TwoSpaces" xml:space="preserve">
-    <value>2 espaces</value>
+    <value>2 пропуски</value>
   </data>
   <data name="Unescape" xml:space="preserve">
-    <value>Déséchapper</value>
+    <value>Відновити екранування</value>
   </data>
   <data name="Yaml" xml:space="preserve">
     <value>Yaml</value>
