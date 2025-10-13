@@ -6,7 +6,7 @@
         <EnableWindowsTargeting>true</EnableWindowsTargeting>
 
         <PackageId>WindowSill.DevToys</PackageId>
-        <Version>0.6.2</Version>
+        <Version>0.7.0</Version>
         <Authors>Etienne Baudoux</Authors>
         <Title>DevToys</Title>
         <Description>Format, sort and convert JSON, format XML, decode Base64 and unescape text just by selecting it in any app! This extension was made in the same spirit than DevToys https://devtoys.app</Description>
@@ -25,7 +25,7 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="WindowSill.API" Version="0.5.0" />
+        <PackageReference Include="WindowSill.API" Version="0.7.0" />
         <PackageReference Include="YamlDotNet" Version="16.3.0" />
     </ItemGroup>
 </Project>
