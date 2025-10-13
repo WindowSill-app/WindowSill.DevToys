@@ -31,7 +31,7 @@ jobs:
       run: dotnet restore src/WindowSill.DevToys/WindowSill.DevToys.csproj
 
     - name: Create NuGet package with MSBuild
-      run: msbuild src/WindowSill.DevToys/WindowSill.DevToys.csproj /p:Configuration=Release /p:Platform="Any CPU" /p:PackageOutputPath=${{ github.workspace }}/artifacts /p:RestorePackages=false
+      run: msbuild src/WindowSill.DevToys/WindowSill.DevToys.csproj /p:Configuration=Release /p:Platform="x64" /p:PackageOutputPath=${{ github.workspace }}/artifacts /p:RestorePackages=false
 
     - name: Publish to NuGet.org
       run: dotnet nuget push "${{ github.workspace }}\artifacts\*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
