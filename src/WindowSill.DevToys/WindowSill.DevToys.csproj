@@ -6,7 +6,7 @@
         <EnableWindowsTargeting>true</EnableWindowsTargeting>
 
         <PackageId>WindowSill.DevToys</PackageId>
-        <Version>0.7.0</Version>
+        <Version>0.7.1</Version>
         <Authors>Etienne Baudoux</Authors>
         <Title>DevToys</Title>
         <Description>Format, sort and convert JSON, format XML, decode Base64 and unescape text just by selecting it in any app! This extension was made in the same spirit than DevToys https://devtoys.app</Description>

@@ -1,3 +1,6 @@
+# 0.7.1.0
+- Improved Spanish translation.
+
 # 0.7.0.0
 - Updated dependencies.
 
