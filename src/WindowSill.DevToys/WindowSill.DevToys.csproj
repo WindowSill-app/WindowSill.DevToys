@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net9.0-windows10.0.22621</TargetFramework>
+        <TargetFramework>net10.0-windows10.0.22621</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <EnableWindowsTargeting>true</EnableWindowsTargeting>
 
         <PackageId>WindowSill.DevToys</PackageId>
-        <Version>0.7.1</Version>
+        <Version>0.7.2</Version>
         <Authors>Etienne Baudoux</Authors>
         <Title>DevToys</Title>
         <Description>Format, sort and convert JSON, format XML, decode Base64 and unescape text just by selecting it in any app! This extension was made in the same spirit than DevToys https://devtoys.app</Description>
